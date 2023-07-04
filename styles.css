@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Samim;
+  src: url('./assets/fonts/Samim.woff') format('woff');
+  font-style: normal;
+}
+
+body {
+  font-family: Samim;
+  background: rgb(248, 249, 251);
+}
