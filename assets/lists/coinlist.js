@@ -1,0 +1,92 @@
+const coins = [
+  {
+    enName: "BTC",
+    peName: "بیت کوین",
+    price: 30032.5,
+    changes: -1.51,
+  },
+  {
+    enName: "YFI",
+    peName: "یرن فایننس",
+    price: 6749.89,
+    changes: -2.3,
+  },
+  {
+    enName: "PAXG",
+    peName: "پکس گلد",
+    price: 1888.31,
+    changes: 0.08,
+  },
+  {
+    enName: "ETH",
+    peName: "اتریوم",
+    price: 1855,
+    changes: 3.13,
+  },
+  {
+    enName: "MKR",
+    peName: "میکر",
+    price: 973.45,
+    changes: 6.72,
+  },
+  {
+    enName: "BCH",
+    peName: "بیت کوین کش",
+    price: 285,
+    changes: 4.54,
+  },
+  {
+    enName: "BNB",
+    peName: "بایننس کوین",
+    price: 234,
+    changes: -1.53,
+  },
+  {
+    enName: "XMR",
+    peName: "مونرو",
+    price: 166,
+    changes: 0.89,
+  },
+  {
+    enName: "QNT",
+    peName: "کوانت",
+    price: 102,
+    changes: -1.9,
+  },
+  {
+    enName: "LTC",
+    peName: "لایت کوین",
+    price: 97,
+    changes: -4.13,
+  },
+  {
+    enName: "AAVE",
+    peName: "آوه",
+    price: 71,
+    changes: -2.36,
+  },
+  {
+    enName: "COMP",
+    peName: "کامپاند",
+    price: 56,
+    changes: -0.75,
+  },
+  {
+    enName: "GMX",
+    peName: "جی ام ایکس",
+    price: 54,
+    changes: -2.87,
+  },
+  {
+    enName: "EGLD",
+    peName: "مولتیورس ایکس",
+    price: 33.71,
+    changes: -2.97,
+  },
+  {
+    enName: "SOL",
+    peName: "سولانا",
+    price: 20,
+    changes: 6.44,
+  },
+];

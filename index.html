@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/lists/coinlist.js"></script>
+    <script src="app.js"></script>
+    <title>Exchange</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js"></script>
-  <title>
-    Exchange
-  </title>
-</head>
-
-<body>
-  <div id="navbar" class="wrapper">
-    <div class="col-2">
-      <div onclick="goToBanner()" class="btn">banner</div>
+  <body onload="loading()">
+    <div id="navbar" class="wrapper">
+      <div class="col-2">
+        <div onclick="goToBanner()" class="btn">banner</div>
+      </div>
+      <div class="col-2">
+        <div onclick="goToCoinList()" class="btn">coinlist</div>
+      </div>
+      <div class="col-2">
+        <div onclick="goToConvert()" class="btn">convert box</div>
+      </div>
+      <div class="col-2">
+        <div onclick="goToFooter()" class="btn">footer</div>
+      </div>
     </div>
-    <div class="col-2">
-      <div onclick="goToCoinList()" class="btn">coinlist</div>
-    </div>
-    <div class="col-2">
-      <div onclick="goToConvert()" class="btn">convert box</div>
-    </div>
-    <div class="col-2">
-      <div onclick="goToFooter()" class="btn">footer</div>
-    </div>
-
-  </div>
-  <div id="banner" class="wrapper"></div>
-  <div id="coinlist" class="wrapper"></div>
-  <div id="convertbox" class="wrapper"></div>
-  <div id="footer" class="wrapper"></div>
-</body>
-
+    <div id="banner" class="wrapper"></div>
+    <div id="coinlist" class="wrapper"></div>
+    <div id="convertbox" class="wrapper"></div>
+    <div id="footer" class="wrapper"></div>
+  </body>
 </html>
