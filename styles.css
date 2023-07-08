@@ -8,7 +8,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  vertical-align: middle;
   align-content: center;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   transition: opacity 400ms ease;
@@ -72,6 +71,20 @@ body {
   width: 100%;
 }
 
+.row-1 {
+  height: 40%;
+  padding: 15px;
+}
+
+.row-2 {
+  height: 50%;
+  padding: 2%;
+}
+
+.row-3 {
+  height: 75%;
+  padding: 2%;
+}
 .wrapper {
   width: 100%;
   padding-left: 30px;
@@ -137,12 +150,16 @@ body {
 }
 
 #convertbox {
-  height: 500px;
-  background-color: orange;
+  height: 600px;
+  background-color: #332430;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 #footer {
-  height: 300px;
+  height: 50px;
   background-color: violet;
 }
 
@@ -167,4 +184,54 @@ table {
   text-decoration: underline;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.convert-main {
+  height: 100%;
+  background-color: #333;
+  width: 100%;
+}
+
+select {
+  background-color: #525052;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  size: 4;
+}
+
+option {
+  border: 1px solid #381c33;
+  text-align: center;
+  padding: 5px;
+}
+option:hover {
+  background-color: #381c33;
+}
+
+label {
+  text-align: center;
+  color: white;
+  font-size: larger;
+  height: 50px;
+  padding-top: 10px !important;
+  margin-top: 5px;
+  float: left;
+}
+
+#coininput {
+  height: 50px;
+  font-size: larger;
+}
+
+.result {
+  height: 50px;
+  background-color: #525052;
+  font-size: 20px;
 }

@@ -1,3 +1,8 @@
+window.onload = () => {
+  window.location.href = "#";
+  load_list(5);
+  load_convertbox();
+};
 const goToBanner = () => {
   window.location.href = "#banner";
   //console.log("Hey");
@@ -14,11 +19,6 @@ const goToFooter = () => {
   window.location.href = "#footer";
   //console.log("Hey");
 };
-const loading = () => {
-  window.location.href = "#";
-  load_list(5);
-  load_convertbox();
-};
 const load_list = (x) => {
   var coinlist = document.getElementById("coinlist");
   if (x > 5) {
@@ -34,7 +34,6 @@ const load_list = (x) => {
             </tr>`;
 
   for (let i = 0; i < x; i++) {
-    console.log(coins[i]);
     tags += `<tr>
                 <td>${coins[i].enName}</td>
                 <td>${coins[i].peName}</td>
@@ -49,4 +48,66 @@ const load_list = (x) => {
   tags += "</table>";
   tags += `<a class="table_link" onclick="load_list(15)">جدول کامل</a>`;
   coinlist.innerHTML = tags;
+};
+
+const load_convertbox = () => {
+  var convertbox = document.getElementById("convertbox");
+  var tags = `<div class="convert-main" >`;
+  tags += `<div class="row-1">`;
+  tags += `<div class="col-4">`;
+  tags += `<select id="coin-1" onchange="updateConvert()">`;
+  for (let i = 0; i < coins.length; i++) {
+    //console.log(coins[i]);
+    tags += `<option value="${coins[i].enName}">
+                ${coins[i].peName}
+            </option>`;
+  }
+  tags += `</select>`;
+  tags += `</div>`;
+  tags += `<label class="col-2">چی داری؟ </label>`;
+
+  tags += `<input id="coininput" type="number" class="col-3" onkeyup="updateConvert()"/>`;
+  tags += `<label class="col-2">چقدر داری؟ </label>`;
+  tags += `</div>`;
+
+  tags += `<div class="row-1">`;
+  tags += `<div class="col-4">`;
+  tags += `<select id="coin-2" onchange="updateConvert()">`;
+  for (let i = 0; i < coins.length; i++) {
+    //console.log(coins[i]);
+    tags += `<option value="${coins[i].enName}">
+                ${coins[i].peName}
+            </option>`;
+  }
+  tags += `</select>`;
+  tags += `</div>`;
+  tags += `<label class="col-2">چی میخوای؟</label>`;
+  tags += `<label id="result" class="col-3"></label>`;
+  tags += `<label class="col-2"> : انقدر میشه </label>`;
+  tags += `</div>`;
+
+  tags += "</div>";
+
+  convertbox.innerHTML = tags;
+};
+const updateConvert = () => {
+  var coin1_select = document.getElementById("coin-1");
+  var selected1 = coin1_select.options[coin1_select.selectedIndex].value;
+  var price1 = priceOf(selected1);
+
+  var coin2_select = document.getElementById("coin-2");
+  var selected2 = coin2_select.options[coin2_select.selectedIndex].value;
+  var price2 = priceOf(selected2);
+
+  var coininput = document.getElementById("coininput");
+  var input = coininput.value;
+
+  var result = document.getElementById("result");
+  result.innerHTML = ((price1 * 1.0) / price2) * 1.0 * input;
+};
+
+const priceOf = (name) => {
+  for (let i = 0; i < coins.length; i++) {
+    if (coins[i].enName === name) return parseFloat(coins[i].price);
+  }
 };
