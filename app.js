@@ -11,8 +11,16 @@ const goToCoinList = () => {
   window.location.href = "#coinlist";
   //console.log("Hey");
 };
-const goToConvert = () => {
+const goToConvert = (x) => {
   window.location.href = "#convertbox";
+  var list2 = document.getElementById("coin-2");
+  console.log(x);
+  console.log(list2);
+  console.log(list2.selectedIndex);
+
+  list2.selectedIndex = x;
+  console.log(list2.selectedIndex);
+
   //console.log("Hey");
 };
 const goToFooter = () => {
@@ -40,7 +48,7 @@ const load_list = (x) => {
                 <td>${coins[i].price}</td>
                 <td>${coins[i].changes}%</td>
                 <td>
-                    <a class="btn btn_buy" >buy / sell</a>
+                    <a class="btn btn_buy" onclick="goToConvert(${i})" >buy / sell</a>
                 </td>
                 
             </tr>`;
@@ -53,11 +61,11 @@ const load_list = (x) => {
 const load_convertbox = () => {
   var convertbox = document.getElementById("convertbox");
   var tags = `<div class="convert-main" >`;
+  //First Dropdown
   tags += `<div class="row-1">`;
   tags += `<div class="col-4">`;
   tags += `<select id="coin-1" onchange="updateConvert()">`;
   for (let i = 0; i < coins.length; i++) {
-    //console.log(coins[i]);
     tags += `<option value="${coins[i].enName}">
                 ${coins[i].peName}
             </option>`;
@@ -69,7 +77,7 @@ const load_convertbox = () => {
   tags += `<input id="coininput" type="number" class="col-3" onkeyup="updateConvert()"/>`;
   tags += `<label class="col-2">چقدر داری؟ </label>`;
   tags += `</div>`;
-
+  //Second Dropdown
   tags += `<div class="row-1">`;
   tags += `<div class="col-4">`;
   tags += `<select id="coin-2" onchange="updateConvert()">`;
@@ -86,6 +94,13 @@ const load_convertbox = () => {
   tags += `<label class="col-2"> : انقدر میشه </label>`;
   tags += `</div>`;
 
+  tags += `<div class="row-1">`;
+  tags += `<div class="col-2">`;
+
+  tags += "</div>";
+  tags += `<div class="col-2">`;
+  tags += "</div>";
+  tags += "</div>";
   tags += "</div>";
 
   convertbox.innerHTML = tags;

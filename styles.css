@@ -11,6 +11,7 @@
   align-content: center;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   transition: opacity 400ms ease;
+  text-align: center;
 }
 
 body {
@@ -70,7 +71,12 @@ body {
 .col-12 {
   width: 100%;
 }
-
+[class*="col-"] {
+  float: left;
+  padding: 5px;
+  height: 100%;
+  text-align: center;
+}
 .row-1 {
   height: 40%;
   padding: 15px;
@@ -131,7 +137,7 @@ body {
 
 #navbar {
   height: 60px;
-  background-color: #333;
+  background-image: linear-gradient(to bottom, #333, #4a4545);
   padding-left: 25%;
   position: fixed;
 }
@@ -144,14 +150,14 @@ body {
 
 #coinlist {
   height: 500px;
-  background-color: #4a4545;
+  background-image: linear-gradient(to bottom, #4a4545, #332430);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 #convertbox {
   height: 600px;
-  background-color: #332430;
+  background-image: linear-gradient(to bottom, #332430, #572e4f);
   padding-left: 12%;
   padding-right: 12%;
   padding-top: 5%;
@@ -159,8 +165,8 @@ body {
 }
 
 #footer {
-  height: 50px;
-  background-color: violet;
+  height: 300px;
+  background-image: linear-gradient(to bottom, #572e4f, #000);
 }
 
 th,
@@ -234,4 +240,19 @@ label {
   height: 50px;
   background-color: #525052;
   font-size: 20px;
+}
+.footerlink {
+  display: block;
+  margin: 30px;
+  font-size: 20px;
+  padding: 2px;
+  color: white;
+  background-image: linear-gradient(to bottom, #000, #572e4f);
+  border-radius: 5px;
+  height: 35px;
+  text-decoration: none;
+}
+
+.footerlink:hover {
+  background-image: linear-gradient(to bottom, #572e4f, #000);
 }
